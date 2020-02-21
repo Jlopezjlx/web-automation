@@ -34,6 +34,11 @@ class TestWiki(unittest.TestCase):
         except:
             self.fail("Error on type in")
 
+        try:
+            WikiHome.click_on_search_button()
+        except:
+            self.fail("Error on clicking")
+
         time.sleep(2)
 
         # Closing and Quiting

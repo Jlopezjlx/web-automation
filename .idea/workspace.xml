@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/configs/browser_configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/configs/browser_configs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/locators/youtubelocators.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/locators/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pages/youtubehome.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/pages/wikihome.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/test/test_youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/test/test_wiki.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/locators/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/locators/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/pages/wikihome.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/pages/wikihome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/test/test_wiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/test/test_wiki.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

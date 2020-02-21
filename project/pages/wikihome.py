@@ -55,6 +55,14 @@ class WikiHome(unittest.TestCase):
             self.tearDown()
             self.fail("Fail on Typing search param")
 
+    @allure.step('{0}')
+    def click_on_search_button(self):
+        try:
+            driver.find_element(*Locators.search_button).click()
+        except:
+            self.tearDown()
+            self.fail("Fail on clicking on search button")
+
 
 if __name__ == '__main__':
     pass
