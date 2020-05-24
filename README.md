@@ -2,7 +2,7 @@
 
 Scalable web automation framework, great configurable. 
 
-###Tools
+## Tools
 1. Python
 2. Pytest
 3. Selenium
@@ -17,7 +17,8 @@ Scalable web automation framework, great configurable.
 4. Framework uses allure for report.
 5. Can execute a basic selenium grid with 5 nodes.
 
-##Run
+
+## Run
 
 1. Clone the repo.
 2. Install dependencies: `pip install -r requirements.txt`
