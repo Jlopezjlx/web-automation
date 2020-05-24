@@ -1,4 +1,4 @@
-# Web Automation using POM
+# Web Automation testing
 
 Scalable web automation framework, great configurable. 
 
