@@ -45,8 +45,18 @@ services:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
 
-  opera:
-    image: selenium/node-opera:3.141.59-20200515
+  firefox2:
+    image: selenium/node-firefox:3.141.59-20200515
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  firefox3:
+    image: selenium/node-firefox:3.141.59-20200515
     volumes:
       - /dev/shm:/dev/shm
     depends_on:

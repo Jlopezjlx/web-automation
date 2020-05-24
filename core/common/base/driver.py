@@ -33,7 +33,11 @@ class DriverSetup:
             Exception: [Selected Browser not Supported]
         """
         if BrowserConfigs.browser == "firefox":
-            self.driver = webdriver.Firefox(executable_path=BrowserConfigs.firefox_driver_path)
+            if BrowserConfigs.remote:
+                self.driver = webdriver.Remote(command_executor='http://192.168.0.9:4444/wd/hub',
+                                               desired_capabilities=DesiredCapabilities.FIREFOX)
+            else:
+                self.driver = webdriver.Firefox(executable_path=BrowserConfigs.firefox_driver_path)
         elif BrowserConfigs.browser == "chrome":
             if BrowserConfigs.remote:
                 self.driver = webdriver.Remote(command_executor='http://192.168.0.9:4444/wd/hub',
