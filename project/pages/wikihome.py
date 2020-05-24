@@ -9,38 +9,32 @@ from project.locators.locators import Locators
 from core.utils.driverutils import DriverUtils
 import unittest
 import allure
-
-# Instance of used clasess
+import pytest
 DriverUtils = DriverUtils()
-DriverSetup = DriverSetup()
-
-# Setting up driver
-DriverSetup.setup()
-
-# Getting driver
-driver = DriverSetup.driver
 
 
-class WikiHome(unittest.TestCase):
+class WikiHome:
     """[Home Class]
     """
+    def __init__(self, driver):
+        self.driver = driver
+
     def tearDown(self):
         """[Closing and quitting driver]
         """
-        driver.close()
-        driver.quit()
+        self.driver.close()
+        self.driver.quit()
 
     @allure.step('{0}')
     def getting_page(self):
         """[Getting youtube home page]
         """
         try:
-            driver.get("https://www.wikipedia.org/")
-            driver.maximize_window()
-            DriverUtils.wait_for(Locators.i_search, driver)
+            self.driver.get("https://www.wikipedia.org/")
+            self.driver.maximize_window()
+            DriverUtils.wait_for(by_locator=Locators.i_search, driver=self.driver)
         except:
             self.tearDown()
-            self.fail("Fail on Loading Youtube Page")
 
     @allure.step('{0}')
     def type_in_search(self, text):
@@ -50,18 +44,16 @@ class WikiHome(unittest.TestCase):
             text {[str]} -- [text to be type]
         """
         try:
-            driver.find_element(*Locators.i_search).send_keys(text)
+            self.driver.find_element(*Locators.i_search).send_keys(text)
         except:
             self.tearDown()
-            self.fail("Fail on Typing search param")
 
     @allure.step('{0}')
-    def click_on_search_button(self):
+    def click_on_search_button(self, ):
         try:
-            driver.find_element(*Locators.search_button).click()
+            self.driver.find_element(*Locators.search_button).click()
         except:
             self.tearDown()
-            self.fail("Fail on clicking on search button")
 
 
 if __name__ == '__main__':
