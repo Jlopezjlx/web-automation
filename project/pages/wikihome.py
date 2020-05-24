@@ -10,7 +10,9 @@ from core.utils.driverutils import DriverUtils
 import unittest
 import allure
 import pytest
+
 DriverUtils = DriverUtils()
+DriverSetup = DriverSetup()
 
 
 class WikiHome:
