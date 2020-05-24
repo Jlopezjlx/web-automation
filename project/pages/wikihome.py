@@ -21,12 +21,6 @@ class WikiHome:
     def __init__(self, driver):
         self.driver = driver
 
-    def tearDown(self):
-        """[Closing and quitting driver]
-        """
-        self.driver.close()
-        self.driver.quit()
-
     @allure.step('{0}')
     def getting_page(self):
         """[Getting youtube home page]

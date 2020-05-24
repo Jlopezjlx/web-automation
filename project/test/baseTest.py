@@ -17,3 +17,9 @@ class BaseTest(unittest.TestCase):
         DriverSetup.setup()
         self.driver = DriverSetup.driver
         self.home = WikiHome(self.driver)
+
+    def tear_down(self):
+        """[Closing and quitting driver]
+        """
+        self.driver.close()
+        self.driver.quit()

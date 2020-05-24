@@ -21,7 +21,7 @@ class TestHome(BaseTest):
         self.home.click_on_search_button()
         time.sleep(2)
         # Closing and Quiting
-        self.home.tearDown()
+        self.tear_down()
 
     def test_wiki_second(self):
         """[Home]
@@ -33,7 +33,7 @@ class TestHome(BaseTest):
         self.home.click_on_search_button()
         time.sleep(2)
         # Closing and Quiting
-        self.home.tearDown()
+        self.tear_down()
 
 
 if __name__ == '__main__':
