@@ -21,6 +21,12 @@ class WikiHome:
     def __init__(self, driver):
         self.driver = driver
 
+    def tear_down(self):
+        """[Closing and quitting driver]
+        """
+        self.driver.close()
+        self.driver.quit()
+
     @allure.step('{0}')
     def getting_page(self):
         """[Getting youtube home page]
@@ -30,7 +36,7 @@ class WikiHome:
             self.driver.maximize_window()
             DriverUtils.wait_for(by_locator=Locators.i_search, driver=self.driver)
         except:
-            self.tearDown()
+            self.tear_down()
 
     @allure.step('{0}')
     def type_in_search(self, text):
@@ -42,14 +48,14 @@ class WikiHome:
         try:
             self.driver.find_element(*Locators.i_search).send_keys(text)
         except:
-            self.tearDown()
+            self.tear_down()
 
     @allure.step('{0}')
     def click_on_search_button(self, ):
         try:
             self.driver.find_element(*Locators.search_button).click()
         except:
-            self.tearDown()
+            self.tear_down()
 
 
 if __name__ == '__main__':
