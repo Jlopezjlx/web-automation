@@ -12,7 +12,7 @@ from project.test.baseTest import BaseTest
 class TestHome(BaseTest):
 
     def test_wiki(self):
-        """[Home]
+        """[Home, This is just a placeholder, it is not a real test]
         """
         # Getting Home Page
         self.home.getting_page()
@@ -24,7 +24,7 @@ class TestHome(BaseTest):
         self.tear_down()
 
     def test_wiki_second(self):
-        """[Home]
+        """[Home, This is just a placeholder, it is not a real test]
         """
         # Getting Home Page
         self.home.getting_page()
