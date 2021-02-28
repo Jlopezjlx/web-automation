@@ -1,11 +1,14 @@
 """[Test Youtube]
 """
+import logging
 import sys
+
 
 sys.path.append("./")
 
 import time
 import unittest
+import pytest
 from project.test.baseTest import BaseTest
 
 
@@ -37,4 +40,5 @@ class TestHome(BaseTest):
 
 
 if __name__ == '__main__':
+    pytest.main()
     unittest.main()

@@ -10,6 +10,6 @@ class BrowserConfigs:
     """[Browser Configurations]
     """
     browser = "chrome"
-    remote = True
+    remote = False
     chrome_driver_path = "./core/configs/chromedriver/chromedriver.exe"
     firefox_driver_path = "./core/configs/firefoxdriver/geckodriver"

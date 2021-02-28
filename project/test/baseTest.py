@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("./")
 
-from project.pages.wikihome import WikiHome
+from project.pages.wikiHome.wikihome import WikiHome
 from core.common.base.driver import DriverSetup
 from core.utils.driverutils import DriverUtils
 import unittest
